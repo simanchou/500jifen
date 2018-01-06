@@ -94,7 +94,10 @@ if __name__ == "__main__":
     }
 
     for teamCode, teamName in teamDict.items():
+        print("开始采集【{}】的数据...".format(teamName))
         html = getPageSource(url, teamCode)
         data = analyseDataFromPageSource(html)
         generateExcel(data, teamName)
+        print("【{}】的数据采集完成！".format(teamName))
+        print("等待3秒继续...")
         time.sleep(3)
