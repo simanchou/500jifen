@@ -44,4 +44,4 @@ for tr in tbody.find_all("tr"):
     for td in tr.find_all("td"):
         if td.getText():
             print(td.getText())
-            print(td.get_attribute("class"))
+            #print(td.get_attribute("class"))
